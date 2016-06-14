@@ -22,6 +22,20 @@ body, a:link, a:visited, a:active{
 }
 .dancer{
   border:10px solid red;
-  border-radius:10px;
+  border-radius:1px;
   position:absolute;
+  background-color: orange;
+  height: 50px;
+  width: 50px;
+}
+
+.stretchy{
+  background-color: green;
+  height: 100px;
+}
+
+.rotate {
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(70deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
