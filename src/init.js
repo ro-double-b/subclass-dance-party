@@ -1,5 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.animals = [];
+  window.farmers = [];
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -24,9 +26,26 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 1750
+      Math.max(1500,Math.random() * 2750)
     );
+
+    window.dancers.push(dancer);
+
+    if (dancer.$node.hasClass('farmer')) {
+      farmers.push(dancer);
+    } else {
+      animals.push(dancer);
+    }
+
     $('body').append(dancer.$node);
+  });
+
+  $('.lineUp').on('click', function(event) {
+    window.dancers.forEach(function(item) {
+      //$("body").height(100);
+      //item.$node.height(100px);
+      item.$node.animate({top: 100});
+    });
   });
 });
 

@@ -2,13 +2,12 @@ body, html{
   height:100%;
 }
 
-/*new*/
 body{
   margin: 0px;
 /*  background-color:#444; */
   font-size: 18px;
   background: url("farm-background-hi.png");
-  background-size: inherit;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -28,7 +27,6 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 
-/*new*/
 .dancer{
 /*
   border:10px solid red;
