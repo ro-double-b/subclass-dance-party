@@ -38,8 +38,7 @@ body, a:link, a:visited, a:active{
   width: 100px;
 }
 
-.stretchy{
-  background-color: green;
+.cow{
   height: 100px;
 }
 
@@ -47,4 +46,19 @@ body, a:link, a:visited, a:active{
     -webkit-transform: rotate(150deg);
     -moz-transform: rotate(70deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+.farmer {
+  height:100px;
+  width: auto;
+}
+
+.ketchup {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;  
+  position: absolute;
 }

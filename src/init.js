@@ -41,10 +41,10 @@ $(document).ready(function() {
   });
 
   $('.lineUp').on('click', function(event) {
-    window.dancers.forEach(function(item) {
+    window.animals.forEach(function(item) {
       //$("body").height(100);
       //item.$node.height(100px);
-      item.$node.animate({top: 100});
+      item.$node.animate({top: 430});
     });
   });
 });
