@@ -1,11 +1,18 @@
 body, html{
   height:100%;
 }
+
+/*new*/
 body{
   margin: 0px;
-  background-color:#444;
+/*  background-color:#444; */
   font-size: 18px;
+  background: url("farm-background-hi.png");
+  background-size: inherit;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
+
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
@@ -20,13 +27,17 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
+/*new*/
 .dancer{
+/*
   border:10px solid red;
   border-radius:1px;
-  position:absolute;
   background-color: orange;
-  height: 50px;
-  width: 50px;
+*/
+  position:absolute;
+  height: 100px;
+  width: 100px;
 }
 
 .stretchy{
