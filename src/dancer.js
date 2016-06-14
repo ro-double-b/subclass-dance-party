@@ -43,7 +43,8 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
 MakeDancer.prototype.step = function() {
   console.log('this step is still on Make Dancer');
 
-  setTimeout(this.step, this.timeBetweenSteps);
+  //setTimeout(this.step, this.timeBetweenSteps);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps)
   // setTimeout(function(){ return this.step();}, this.timeBetweenSteps);
 };
 

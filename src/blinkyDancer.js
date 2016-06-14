@@ -32,20 +32,25 @@ MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
 
 MakeBlinkyDancer.prototype.step = function() {
   console.log("MakeBlinkyDancer step function has been called");
-  // MakeDancer.prototype.step.call(this);
-  //debugger
-  var that = this
+  //MakeDancer.prototype.step.call(this);
+  var obj = this;
+  var time = this.timeBetweenSteps;
+  setTimeout(function(){ return obj.step(); }, obj.timeBetweenSteps);
+
+
+/*
   setTimeout(
-    // function() { 
-      that.step(),
+    
+
+    function() { 
+      console.log(this);
        //this code correctly blinks in perpetuity BUT is bound to the window and not to the MakeBlinkyDancer instance 
-     // this.step.call(this); },
-// },
-    that.timeBetweenSteps);
-  //setTimeout(MakeBlinkyDancer.prototype.step.bind(this, this.timeBetweenSteps));
-  // this.oldStep();
-  // console.log(this.$node);
-  this.$node.toggle();
+     return MakeBlinkyDancer.prototype.step.call(this); },
+
+    this.timeBetweenSteps);
+*/
+  //console.log(this.$node);
+  obj.$node.toggle();
 
 };  
 
