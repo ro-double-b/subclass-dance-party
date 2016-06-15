@@ -31,7 +31,7 @@ $(document).ready(function() {
 
     window.dancers.push(dancer);
 
-    if (dancer.$node.hasClass('farmer')) {
+    if (dancer.$node.hasClass('farmer') || dancer.$node.hasClass('moveFarmer')) {
       farmers.push(dancer);
     } else {
       animals.push(dancer);
@@ -47,5 +47,8 @@ $(document).ready(function() {
       item.$node.animate({top: 430});
     });
   });
+
+
+
 });
 

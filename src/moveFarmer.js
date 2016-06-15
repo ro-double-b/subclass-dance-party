@@ -1,16 +1,39 @@
-var MakeFarmer = function(top, left, timeBetweenSteps) {
+var MakeMoveFarmer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.addClass('farmer');
-  this.$node.attr('src', 'http://www.picgifs.com/graphics/f/farm/graphics-farm-930914.gif');
-    // console.log(this.$node.css("top"))
-  this.step();
+  this.$node.addClass('moveFarmer');
+  this.$node.attr('src', 'https://dzc2hmj8w639c.cloudfront.net/sites/default/files/fv2_farmboy.png');
   this.interactionStep();
+
+  $(document).keyup(function(e) {
+    if (e.which === 38) {
+      var styleSettings = { 
+        top: parseInt($('.moveFarmer').css("top")) - 20
+      };
+    } 
+    if (e.which === 40) {
+      var styleSettings = { 
+        top: parseInt($('.moveFarmer').css("top")) + 20
+      };
+    }
+    if (e.which === 37) {
+      var styleSettings = { 
+        left: parseInt($('.moveFarmer').css("left")) - 20
+      };
+    }
+    if (e.which === 39) {
+      var styleSettings = { 
+        left: parseInt($('.moveFarmer').css("left")) + 20
+      };
+    } 
+    $('.moveFarmer').css(styleSettings);
+  });
+
 };
 
-MakeFarmer.prototype = Object.create(MakeDancer.prototype);
-MakeFarmer.prototype.constructor = MakeFarmer;
+MakeMoveFarmer.prototype = Object.create(MakeDancer.prototype);
+MakeMoveFarmer.prototype.constructor = MakeFarmer;
 
-MakeFarmer.prototype.interactionStep = function() {
+MakeMoveFarmer.prototype.interactionStep = function() {
   MakeDancer.prototype.interactionStep.call(this);
   
   var height = parseInt(this.$node.css('top'));
@@ -86,21 +109,5 @@ MakeFarmer.prototype.interactionStep = function() {
       }
     }
   });
-
-};
-
-MakeFarmer.prototype.step = function() {
-  MakeDancer.prototype.step.call(this);
-  this.$node.toggleClass('rotate');
-  move_random(this);
-    //console.log(this.$node.css("top"))
-};  
-
-var move_random = function(obj) {
-  var styleSettings = {
-    top: $("body").height() * Math.random(),
-    left: $("body").width() * Math.random()
-  };
-  obj.$node.animate(styleSettings);
 
 };

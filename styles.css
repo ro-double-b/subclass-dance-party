@@ -62,3 +62,9 @@ body, a:link, a:visited, a:active{
   user-select: none;  
   position: absolute;
 }
+
+.bear {
+  height: 250px;
+  width: auto;
+  transform: rotate(75deg);
+}
